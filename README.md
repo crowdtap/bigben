@@ -3,6 +3,30 @@ BigBen [![Build Status](https://travis-ci.org/crowdtap/bigben.png?branch=master)
 
 BigBen is a dead simple way to run a timer in a background thread.
 
+Install
+-------
+
+```ruby
+gem install bigben
+```
+or add the following line to your Gemfile:
+```ruby
+gem 'bigben'
+```
+and run `bundle install`
+
+Usage
+-----
+
+```ruby
+  timer = BigBen.new('timer', 1) do
+    puts "Hello World"
+  end
+```
+
+This will output "Hello World" every second. **Note that this happens on a
+background thread.**
+
 License
 -------
 Copyright (C) 2013 Crowdtap
